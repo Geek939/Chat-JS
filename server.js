@@ -6,20 +6,28 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-// Serve static files from the "public" directory
+
 app.use(express.static('public'));
 
-// Listen for socket connections
+
 io.on('connection', socket => {
     console.log('A user connected');
 
-    // Listen for chat messages from clients
-    socket.on('chatMessage', message => {
-        // Broadcast the message to all connected clients
-        io.emit('chatMessage', message);
+
+    socket.on('joinRoom', room => {
+        socket.join(room);
+        console.log(`User joined room: ${room}`);
     });
 
-    // Listen for disconnect event
+
+    socket.on('chatMessage', data => {
+        const { room, message } = data;
+        const socketsInRoom = io.sockets.adapter.rooms.get(room);
+        socketsInRoom.forEach(socketId => {
+            io.to(socketId).emit('chatMessage', { username: room, message });
+        });
+    });
+   
     socket.on('disconnect', () => {
         console.log('A user disconnected');
     });
