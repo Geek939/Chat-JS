@@ -9,7 +9,27 @@
 </head>
 <body>
     
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div id="chat" class="card">
+                    <div class="card-header">
+                        Chat Room
+                    </div>
+                    <div id="chat-messages" class="card-body">
+                        
+                    </div>
+                    <div class="card-footer">
+                        <input type="text" id="message-input" class="form-control" placeholder="Type your message...">
+                        <button id="send-button" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
 
 
 
