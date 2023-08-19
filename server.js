@@ -21,13 +21,14 @@ io.on('connection', socket => {
 
 
     socket.on('chatMessage', data => {
-        const { room, message } = data;
+        const { room, message, username } = data; 
         const socketsInRoom = io.sockets.adapter.rooms.get(room);
         socketsInRoom.forEach(socketId => {
-            io.to(socketId).emit('chatMessage', { username: room, message });
+            io.to(socketId).emit('chatMessage', { username, message }); 
         });
     });
-   
+    
+
     socket.on('disconnect', () => {
         console.log('A user disconnected');
     });
