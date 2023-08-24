@@ -27,6 +27,9 @@ messageInput.addEventListener('keydown', event => {
 socket.on('chatMessage', data => {
     const messageElement = document.createElement('p');
     const { username, message } = data;
-    messageElement.innerHTML = `<span ${username}">[${username}]</span> ${message}`;
+    messageElement.innerText = `[${username}] ${message}`;
     chatMessages.appendChild(messageElement);
+
+    // Asegurarse de que el cuadro de mensajes se desplace hacia abajo para mostrar el mensaje más reciente
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 });
