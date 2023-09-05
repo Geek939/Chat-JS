@@ -37,7 +37,7 @@ body {
 #chat {
     
     width: 70vw;
-    height: 70vh;
+    height: 90vh;
     border: 1px solid #CCC;
     border-radius: 5px;
     background: linear-gradient(to bottom, #a3d1ff, #fcf9f5);
@@ -191,57 +191,5 @@ input{
     
     
 }
-
-
-@media (max-width: 400px) {
-
-    .msnIcons{
-        
-        height: 3vh;
-        width: 3vw;
-        gap: 15px;
-      
-     
-       
-    }
-
-    .msnSvg{
-        width: 40px;
-        height: 40px;
-    }
-
-    .nostalgia{
-       
-        height: 1%;
-        width: 52vw;
-       
-    }
-
-
-    .card-footer img{
-        width: 40px;
-        height: 40px;
-    }
-
-    .card-footer {
-        
-        height: 100px;
-    
-    }
-
-
-    #chat {
-    
-       
-        height: 80vh;
-       
-    
-        
-    }
-
-  
-
-}
-
 
 
