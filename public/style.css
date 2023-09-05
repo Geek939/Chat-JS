@@ -11,7 +11,7 @@ body {
     
     
     
-    
+
 }
 
 
@@ -37,7 +37,7 @@ body {
 #chat {
     
     width: 70vw;
-    height: 75vh;
+    
     border: 1px solid #CCC;
     border-radius: 5px;
     background: linear-gradient(to bottom, #a3d1ff, #fcf9f5);
