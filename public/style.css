@@ -134,6 +134,7 @@ body {
     align-items: center;
     height: 100px;
     position: relative;
+    padding-top: 1px;
    
     width: 95%;
 }
@@ -194,12 +195,32 @@ input{
 
 @media (max-width: 600px) {
 
-    .msnSvg{
-       display: none;
+    .msnIcons{
+        
+        height: 3vh;
+        width: 3vw;
+        gap: 15px;
+      
+     
+       
     }
 
+    .msnSvg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .nostalgia{
+       
+        height: 1%;
+        width: 52vw;
+       
+    }
+
+
     .card-footer img{
-        display: none;
+        width: 40px;
+        height: 40px;
     }
 
     .card-footer {
@@ -212,7 +233,7 @@ input{
     #chat {
     
        
-        height: 30vh;
+        height: 80vh;
        
     
         
